@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Disability Benefits Eligibility Checker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Free, anonymous disability benefits eligibility helper for SSDI, SSI, VA ratings and related programs." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="page">
+  <header class="site-header">
+    <div class="header-content">
+      <div class="brand">
+        <div class="brand-logo">DB</div>
+        <div class="brand-text">
+          <div class="brand-title">Disability Benefits Eligibility Checker</div>
+          <div class="brand-subtitle">Free screening • Not the government • No legal advice</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="chat.html" class="nav-link nav-link-primary">AI Helper</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-badge">Free &amp; anonymous • 2–5 minute check</div>
+      <h1>Quickly explore your <span class="accent">disability benefits</span> options.</h1>
+      <p class="hero-text">
+        Answer a few guided questions and we’ll help you understand which disability programs
+        people in similar situations often explore: SSDI, SSI, state disability, VA benefits
+        and related support programs.
+      </p>
+      <div class="hero-actions">
+        <a href="#checker" class="btn btn-primary">Start eligibility snapshot</a>
+        <a href="chat.html" class="btn btn-secondary">Chat with the AI helper</a>
+      </div>
+      <p class="hero-meta">
+        We are not the government, a law firm, or your benefits representative. This tool is
+        for general education only and cannot tell you whether you will be approved.
+      </p>
+    </section>
+
+    <section class="card-section">
+      <h2>Why This Is Your #1 Go-To Resource for Understanding Disability Benefits</h2>
+      <p>
+        Navigating disability benefits can feel overwhelming. Government websites are often dense with legal
+        language, and finding trustworthy guidance that speaks in plain English is difficult. That's why
+        thousands of people turn to the Disability Benefits Eligibility Checker as their first stop when
+        trying to understand Social Security Disability Insurance (SSDI), Supplemental Security Income (SSI),
+        VA disability ratings, and state programs.
+      </p>
+      <p>
+        Unlike scattered blog posts or confusing forums, we provide a <strong>structured, step-by-step approach</strong>
+        that helps you organize your thoughts, understand eligibility basics, and prepare intelligent questions
+        for the agencies and professionals who make real decisions. Here's why users choose us:
+      </p>
+      <ul class="steps">
+        <li><strong>Structured questions that mirror what agencies ask.</strong> Our quick snapshot helps you
+          think through work history, condition duration, and representation status — the same factors the SSA
+          and VA consider when reviewing claims.</li>
+        <li><strong>Clear explanations of complex programs.</strong> We break down the differences between SSDI
+          (based on work credits) and SSI (based on financial need), explain VA rating percentages, and clarify
+          when state disability might apply — all in everyday language.</li>
+        <li><strong>An AI helper that explains concepts without crossing the line.</strong> Our educational AI
+          assistant can answer general questions about timelines, documentation, appeals, and common terms. It
+          will never tell you whether you'll be approved or give legal advice, but it can help you understand
+          what questions to ask your representative or case worker.</li>
+        <li><strong>Free, anonymous, and focused on your preparation.</strong> You don't need to create an account,
+          share personal details, or pay fees. The snapshot runs entirely in your browser. The optional AI helper
+          doesn't identify you or store your personal information in a way that ties back to your name.</li>
+        <li><strong>Designed to help you have better conversations with professionals.</strong> We know that the
+          real decisions happen when you speak with Social Security, the VA, a disability attorney, or an accredited
+          representative. Our goal is to help you show up to those conversations organized, informed, and ready to
+          ask the right questions.</li>
+      </ul>
+      <p>
+        We are <strong>not</strong> the government. We are <strong>not</strong> a law firm. We do <strong>not</strong>
+        give legal, financial, or medical advice. We are an independent educational resource built to help people like
+        you feel less lost when facing one of life's most stressful challenges: losing the ability to work because of
+        a health condition.
+      </p>
+      <p>
+        Whether you're just starting to wonder if you might qualify, you've been denied and don't know what to do next,
+        or you're already in the appeals process and need to understand your options, this is the place to start. We
+        help you organize information, understand general rules, and prepare for the conversations that matter most.
+      </p>
+    </section>
+
+    <section id="checker" class="card-section">
+      <h2>Rapid eligibility snapshot (informational only)</h2>
+      <p>
+        Use this quick self-check to organize key facts before you speak with a benefits representative,
+        advocate, or attorney. Your answers stay on this device; nothing is saved to a server.
+      </p>
+
+      <form class="wizard" id="snapshot-form">
+        <div class="field">
+          <label for="program-focus">Which program are you most focused on?</label>
+          <select id="program-focus" required>
+            <option value="">Select one…</option>
+            <option>SSDI – Social Security Disability Insurance</option>
+            <option>SSI – Supplemental Security Income</option>
+            <option>VA Disability / VA rating</option>
+            <option>State disability program</option>
+            <option>Unsure / I need help understanding options</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="work-history">Work history (last 10 years)</label>
+          <select id="work-history" required>
+            <option value="">Select the closest match…</option>
+            <option>Worked full-time most of the last 10 years</option>
+            <option>Worked part-time or on and off</option>
+            <option>Very limited work due to health</option>
+            <option>Mostly out of the workforce (caregiving, school, etc.)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="condition-duration">How long have your main health conditions limited your ability to work?</label>
+          <select id="condition-duration" required>
+            <option value="">Select one…</option>
+            <option>Less than 6 months</option>
+            <option>6–11 months</option>
+            <option>12–23 months</option>
+            <option>24+ months</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="support-status">Current status</label>
+          <select id="support-status" required>
+            <option value="">Select the closest match…</option>
+            <option>I have never applied before</option>
+            <option>I applied and was denied</option>
+            <option>I am currently appealing</option>
+            <option>I already receive some benefits but think they are too low</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="representation">Do you currently have a representative or attorney?</label>
+          <select id="representation" required>
+            <option value="">Select one…</option>
+            <option>No</option>
+            <option>Yes – non‑attorney advocate</option>
+            <option>Yes – disability attorney</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">See common next‑step paths</button>
+      </form>
+
+      <div id="snapshot-result" class="result-card" hidden></div>
+    </section>
+
+    <section id="about" class="card-section">
+      <h2>Who we are &amp; what this is</h2>
+      <p>
+        The Disability Benefits Eligibility Checker is an independent educational resource created by people who
+        understand how confusing and stressful it can be to navigate disability benefits systems. We've seen how
+        overwhelming it feels when you're facing a health condition that limits your ability to work, and you're
+        trying to figure out whether Social Security Disability Insurance (SSDI), Supplemental Security Income (SSI),
+        VA disability benefits, or state programs might help — and what steps to take next.
+      </p>
+      <p>
+        Our mission is simple: to help everyday people feel less lost. We study public guidance from the Social
+        Security Administration, the Department of Veterans Affairs, and state agencies, and translate it into
+        plain-language checklists, clear timelines, and practical questions you can bring to a professional. We
+        don't replace official guidance or legal advice — we complement it by helping you organize your thoughts
+        before you talk with the people who can make real decisions about your case.
+      </p>
+      <p>
+        <strong>What we are NOT:</strong> We are <strong>not</strong> the Social Security Administration, the
+        Department of Veterans Affairs, or any government agency. We are <strong>not</strong> a law firm, a medical
+        office, or a financial planning service. We do <strong>not</strong> make decisions about your claim, determine
+        eligibility, estimate approval odds, or tell you how much money you might receive. We cannot file claims on
+        your behalf, represent you in hearings, or communicate with agencies about your case.
+      </p>
+      <p>
+        <strong>What we ARE:</strong> We are an educational tool designed to help you understand general concepts,
+        organize key information, and feel more prepared when you talk with Social Security, the VA, a disability
+        attorney, an accredited representative, or a state agency. Think of us as a helpful starting point — a place
+        to learn the basics, figure out what questions to ask, and understand common terms before you take your next
+        real-world step.
+      </p>
+      <p>
+        The information on this site is for general educational purposes only. Every person's situation is unique,
+        and disability law can vary depending on your state, your work history, your medical conditions, and many
+        other factors. For advice about your specific case, you should always speak with a licensed attorney,
+        accredited representative, or the appropriate government agency.
+      </p>
+      <p>
+        <strong>About partner links:</strong> This site is free to use. In the future, some pages may include clearly
+        labeled partner links to disability law networks, advocacy organizations, financial tools, and other resources
+        that support people with long-term health conditions. If you choose to click on those links and use those
+        services, we may receive compensation, which helps us keep this educational resource online and available at
+        no cost to you. Partner suggestions will always be optional and clearly marked when they appear. We never
+        charge users to access our educational tools or information.
+      </p>
+    </section>
+
+    <section id="how-it-works" class="card-section">
+      <h2>How it works</h2>
+      <p>
+        Using the Disability Benefits Eligibility Checker is straightforward. We've designed everything to be
+        simple, anonymous, and focused on helping you prepare for real conversations with the people and agencies
+        that make decisions about your case. Here's how to get the most out of this resource:
+      </p>
+      <ol class="steps">
+        <li><strong>Start with the quick eligibility snapshot.</strong> This short questionnaire asks you to
+          select answers about your work history, the duration of your health conditions, your application status,
+          and whether you currently have representation. These are the same types of questions that Social Security,
+          the VA, and state agencies consider when reviewing disability claims. Your answers stay on your device
+          and are never sent to a server or stored in a database.</li>
+        <li><strong>Review your personalized summary.</strong> Based on your answers, the snapshot highlights
+          common paths that people in similar situations often explore. You might see suggestions to learn more
+          about SSDI (if you have recent work history), SSI (if you have limited income and resources), VA
+          disability benefits (if you're a veteran), or state disability programs. You'll also see reminders
+          about appeal deadlines if you've been denied, and suggestions to speak with a representative if you
+          don't already have one.</li>
+        <li><strong>Understand what the snapshot means (and what it doesn't mean).</strong> The summary is
+          <em>not</em> a decision, approval, or guarantee. It's an educational guide to help you organize your
+          thoughts and know what to research next. Think of it like a checklist that says, "Here are the programs
+          and topics you should ask about when you talk with Social Security, the VA, or an attorney."</li>
+        <li><strong>Bring your summary to a professional.</strong> Print or screenshot your results and use
+          them as a starting point when you contact Social Security (1-800-772-1213), schedule an appointment
+          with a Veterans Service Officer, or consult with a disability attorney or accredited representative.
+          Having this information organized will help you ask clearer questions and have more productive
+          conversations.</li>
+        <li><strong>Ask follow-up questions with the AI helper.</strong> On the AI Helper page, you can chat
+          with an educational AI assistant that explains general disability benefits concepts in plain language.
+          You can ask about timelines (like how long appeals take), documentation (what medical records you might
+          need), the difference between SSDI and SSI, what a "medical-vocational allowance" means, and other
+          common terms. The AI helper will <em>never</em> tell you whether you'll be approved, give legal advice,
+          or estimate benefit amounts — it's strictly educational.</li>
+        <li><strong>Take your next real-world step.</strong> After using our tools, your next step is to
+          contact the appropriate agency or professional. That might mean filing an application with Social
+          Security, scheduling an appointment with a Veterans Service Officer, requesting your medical records
+          from your doctor, or talking with a disability lawyer about representation. We help you prepare for
+          those steps, but the real decisions happen when you engage with the official systems and licensed
+          professionals.</li>
+      </ol>
+      <p class="disclaimer">
+        <strong>Important reminder:</strong> Nothing on this site is legal, financial, or medical advice.
+        We do not represent you, file claims on your behalf, or communicate with government agencies about
+        your case. For advice about your specific situation, you must speak with a licensed professional
+        (such as a disability attorney or accredited representative) or contact the appropriate government
+        agency directly (Social Security Administration, Department of Veterans Affairs, or your state
+        disability office).
+      </p>
+    </section>
+
+    <section id="faq" class="card-section">
+      <h2>Common questions</h2>
+      <details>
+        <summary>Is this tool affiliated with the government?</summary>
+        <p>
+          No. We are an independent educational website with no connection to the Social Security Administration
+          (SSA), the Department of Veterans Affairs (VA), or any other government agency. We are not authorized to
+          file claims, represent you in hearings, or make decisions about your eligibility. We simply provide
+          educational information to help you understand general disability benefits concepts and prepare for
+          conversations with official agencies and licensed professionals.
+        </p>
+      </details>
+      <details>
+        <summary>Will this tell me if I will be approved?</summary>
+        <p>
+          No. Only the official agency processing your claim can decide whether you qualify for benefits. The Social
+          Security Administration decides SSDI and SSI claims, the Department of Veterans Affairs decides VA disability
+          claims, and state agencies decide state disability claims. Our eligibility snapshot and AI helper are purely
+          educational tools that help you understand common eligibility factors and organize information. We cannot
+          predict outcomes, estimate approval odds, or guarantee any results.
+        </p>
+      </details>
+      <details>
+        <summary>Do you store my answers or personal information?</summary>
+        <p>
+          The quick eligibility snapshot on this page runs entirely in your web browser. Your answers are processed
+          locally on your device and are not sent to a server or stored in a database. When you use the optional AI
+          helper, your messages are sent to our AI service provider (OpenAI) so the assistant can respond to your
+          questions. However, we do not collect names, Social Security numbers, exact addresses, or other personally
+          identifiable information that would allow us to identify you. The AI helper is designed to answer general
+          educational questions, not to store or track individual users.
+        </p>
+      </details>
+      <details>
+        <summary>Can you give me legal advice?</summary>
+        <p>
+          No. We are not a law firm, and nothing on this site is legal advice. We cannot tell you whether you should
+          file a claim, what to say in your application, how to appeal a denial, or what legal strategy to use. For
+          legal advice about your specific case, you should speak with a licensed disability attorney or an accredited
+          representative. You can find attorneys through your state bar association, disability law organizations like
+          the National Organization of Social Security Claimants' Representatives (NOSSCR), or legal referral services.
+        </p>
+      </details>
+      <details>
+        <summary>Can you help me file my application or appeal?</summary>
+        <p>
+          No. We do not file applications, submit appeals, or communicate with government agencies on your behalf.
+          To file for SSDI or SSI, you can apply online at ssa.gov, call Social Security at 1-800-772-1213, or visit
+          your local Social Security office. For VA disability benefits, you can apply through va.gov or work with a
+          Veterans Service Officer. If you've been denied and need to appeal, you may want to consult with a disability
+          attorney or representative who can help you prepare your case.
+        </p>
+      </details>
+      <details>
+        <summary>Will this remain free?</summary>
+        <p>
+          Yes. The core educational tools on this site — the eligibility snapshot and the AI helper — are free to use
+          and will remain free. We believe everyone should have access to clear, plain-language information about
+          disability benefits, regardless of their financial situation. In the future, some pages on this site may
+          include clearly labeled partner links to disability law firms, advocacy organizations, financial tools, and
+          other resources. If you choose to click on those links and use those services, we may receive compensation,
+          which helps us keep this site online and available at no cost to users. Partner links will always be optional,
+          clearly marked, and never required to access our educational content.
+        </p>
+      </details>
+      <details>
+        <summary>What if I've already been denied? Can this help me?</summary>
+        <p>
+          Yes. Many people who are initially denied for disability benefits go on to win their cases on appeal. If
+          you've been denied, it's important to act quickly because appeal deadlines are strict (usually 60 days from
+          the date on your denial letter). Our eligibility snapshot can help you understand what factors might have led
+          to the denial and what steps are commonly taken during the appeals process. The AI helper can explain general
+          concepts about reconsideration, hearings, and evidence. However, for specific advice about your appeal, you
+          should speak with a disability attorney or accredited representative who can review your file and help you
+          build a stronger case.
+        </p>
+      </details>
+      <details>
+        <summary>How is this different from Social Security's website?</summary>
+        <p>
+          The Social Security Administration's official website (ssa.gov) is the authoritative source for rules,
+          regulations, and official guidance. However, many people find government websites difficult to navigate and
+          hard to understand because they're written in legal and technical language. Our site is designed to translate
+          that information into plain English, organize it into simple checklists, and help you figure out what questions
+          to ask when you contact Social Security directly. Think of us as a helpful study guide, not a replacement for
+          the official source. You should always verify information with the SSA, VA, or your state agency before making
+          important decisions.
+        </p>
+      </details>
+      <details>
+        <summary>I'm a veteran. Can this help me with VA disability?</summary>
+        <p>
+          Yes. While much of the information on this site focuses on Social Security programs (SSDI and SSI), we also
+          provide general educational information about VA disability benefits, including how VA ratings work, the
+          difference between VA disability compensation and Social Security disability, and common questions about
+          appeals and evidence. If you're a veteran, you can use our tools to organize your thoughts and prepare
+          questions before you talk with a Veterans Service Officer, a VA-accredited attorney, or the Department of
+          Veterans Affairs directly. The AI helper can explain general VA concepts, but it cannot give legal advice or
+          tell you what your rating should be.
+        </p>
+      </details>
+      <details>
+        <summary>Can I use this tool on my phone?</summary>
+        <p>
+          Yes. This website is designed to work on all devices, including smartphones, tablets, and desktop computers.
+          The eligibility snapshot and AI helper will adjust to fit your screen size. Because the snapshot runs entirely
+          in your browser, you can use it even if you have a slow internet connection — your answers are processed
+          locally on your device, not on a remote server.
+        </p>
+      </details>
+    </section>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Disability Benefits Eligibility Checker. Educational use only. | <a href="privacy.html">Privacy Policy</a></p>
+      <p class="legal-small">
+        This site does not provide legal, financial, or medical advice and is not a substitute for
+        consulting with a licensed professional or government agency.
+      </p>
+    </footer>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
