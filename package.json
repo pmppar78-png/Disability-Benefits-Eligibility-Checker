@@ -1,0 +1,7 @@
+{
+  "name": "disability-benefits-eligibility-checker",
+  "private": true,
+  "dependencies": {
+    "openai": "^4.104.0"
+  }
+}
