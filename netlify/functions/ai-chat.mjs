@@ -1,37 +1,51 @@
-import OpenAI from "openai";
+const MODEL = "gpt-4o-mini";
 
-const openai = new OpenAI();
+function jsonResponse(body, status = 200) {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: { "Content-Type": "application/json" },
+  });
+}
 
 export default async (req) => {
   if (req.method !== "POST") {
-    return new Response(JSON.stringify({ error: "Method not allowed" }), {
-      status: 405,
-      headers: { "Content-Type": "application/json" },
-    });
+    return jsonResponse({ error: "Method not allowed" }, 405);
+  }
+
+  const apiKey = process.env.OPENAI_API_KEY;
+  const baseUrl = process.env.OPENAI_BASE_URL || "https://api.openai.com/v1";
+
+  if (!apiKey) {
+    return jsonResponse({ error: "AI service is not configured" }, 500);
   }
 
   try {
-    const { messages } = await req.json();
+    const payload = await req.json();
+    const messages = Array.isArray(payload?.messages) ? payload.messages : [];
 
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      messages: messages,
-      max_tokens: 1024,
+    const response = await fetch(`${baseUrl}/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        messages,
+        max_tokens: 1024,
+      }),
     });
 
-    const reply = completion.choices[0]?.message;
+    if (!response.ok) {
+      return jsonResponse({ error: "Failed to get AI response" }, 502);
+    }
 
-    return new Response(JSON.stringify({ reply }), {
-      headers: { "Content-Type": "application/json" },
-    });
-  } catch (err) {
-    console.error("AI chat error:", err);
-    return new Response(
-      JSON.stringify({ error: "Failed to get AI response" }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      }
-    );
+    const completion = await response.json();
+    const reply = completion?.choices?.[0]?.message ?? null;
+
+    return jsonResponse({ reply });
+  } catch (error) {
+    console.error("AI chat error:", error);
+    return jsonResponse({ error: "Failed to get AI response" }, 500);
   }
 };
