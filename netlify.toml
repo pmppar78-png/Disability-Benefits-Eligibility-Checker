@@ -1,10 +1,7 @@
 [build]
+  command = ""
   publish = "."
   functions = "netlify/functions"
-
-[functions]
-  node_bundler = "esbuild"
-  external_node_modules = ["openai"]
 
 [[redirects]]
   from = "/ai-chat"
