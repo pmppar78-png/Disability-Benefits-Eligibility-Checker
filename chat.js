@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   appendMessage(
     "assistant",
-    "Hi, I'm the Disability Benefits AI helper. I can answer general educational questions about SSDI, SSI, VA disability, state programs, timelines, documentation, appeals, and common disability benefits terms. " +
+    "Hi, I'm the Disability Trust AI helper. I can answer general educational questions about SSDI, SSI, VA disability, state programs, timelines, documentation, appeals, and common disability benefits terms. " +
       "I'm here to help you understand concepts and prepare questions for the agencies and professionals who make real decisions. " +
       "Please remember: I cannot tell you whether you'll be approved, give legal advice, estimate benefit amounts, or make decisions about your case. For advice specific to your situation, you should speak with Social Security, the VA, a licensed attorney, or an accredited representative."
   );
