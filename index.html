@@ -5,6 +5,14 @@
   <title>Disability Trust AI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Free, anonymous disability benefits eligibility helper for SSDI, SSI, VA ratings and related programs." />
+  <link rel="canonical" href="https://disabilitytrustai.netlify.app/" />
+  <meta property="og:title" content="Disability Trust AI - Free Disability Benefits Eligibility Helper" />
+  <meta property="og:description" content="Free, anonymous disability benefits eligibility helper for SSDI, SSI, VA ratings and related programs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://disabilitytrustai.netlify.app/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Disability Trust AI - Free Disability Benefits Eligibility Helper" />
+  <meta name="twitter:description" content="Free, anonymous disability benefits eligibility helper for SSDI, SSI, VA ratings and related programs." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="page">
@@ -19,10 +27,9 @@
       </div>
       <nav class="nav">
         <a href="index.html" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#how-it-works" class="nav-link">How it works</a>
-        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="about.html" class="nav-link">About</a>
         <a href="ssdi-complete-guide.html" class="nav-link">SSDI Guide</a>
+        <a href="contact.html" class="nav-link">Contact</a>
         <a href="chat.html" class="nav-link nav-link-primary">AI Helper</a>
       </nav>
     </div>
@@ -372,7 +379,7 @@
     </section>
 
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Disability Trust AI. Educational use only. | <a href="privacy.html">Privacy Policy</a></p>
+      <p>&copy; <span id="year"></span> Disability Trust AI. Educational use only. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
       <p class="legal-small">
         This site does not provide legal, financial, or medical advice and is not a substitute for
         consulting with a licensed professional or government agency.
@@ -381,5 +388,87 @@
   </main>
 
   <script src="app.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Disability Trust AI",
+    "url": "https://disabilitytrustai.netlify.app",
+    "description": "Free, anonymous disability benefits eligibility helper for SSDI, SSI, VA ratings and related programs.",
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is this tool affiliated with the government?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We are an independent educational website with no connection to the Social Security Administration (SSA), the Department of Veterans Affairs (VA), or any other government agency."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will this tell me if I will be approved?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Only the official agency processing your claim can decide whether you qualify for benefits. Our eligibility snapshot and AI helper are purely educational tools."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you store my answers or personal information?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The quick eligibility snapshot runs entirely in your web browser. Your answers are processed locally on your device and are not sent to a server or stored in a database."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you give me legal advice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We are not a law firm, and nothing on this site is legal advice. For legal advice about your specific case, you should speak with a licensed disability attorney or an accredited representative."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will this remain free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The core educational tools on this site — the eligibility snapshot and the AI helper — are free to use and will remain free."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I've already been denied? Can this help me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Many people who are initially denied for disability benefits go on to win their cases on appeal. Our tools can help you understand what factors might have led to the denial and what steps are commonly taken during the appeals process."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is this different from Social Security's website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our site translates government information into plain English, organizes it into simple checklists, and helps you figure out what questions to ask when you contact Social Security directly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use this tool on my phone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. This website is designed to work on all devices, including smartphones, tablets, and desktop computers."
+        }
+      }
+    ]
+  }
+  </script>
 </body>
 </html>
