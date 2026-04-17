@@ -529,6 +529,87 @@ main {
   margin: 0;
 }
 
+/* Process flow diagram */
+.guide-flow {
+  margin: 24px 0;
+  padding: 20px 18px;
+  border-radius: 14px;
+  background: rgba(15,23,42,0.6);
+  border: 1px solid rgba(56,189,248,0.25);
+}
+
+.guide-flow-title {
+  margin: 0 0 14px;
+  font-size: 15px;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.guide-flow-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.guide-flow-step {
+  flex: 1 1 140px;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  padding-right: 18px;
+}
+
+.guide-flow-step:not(:last-child)::after {
+  content: "\2192";
+  position: absolute;
+  right: 0;
+  top: 14px;
+  color: #38bdf8;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.guide-flow-node {
+  background: radial-gradient(circle at 30% 20%, #38bdf8, #1d4ed8);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+}
+
+.guide-flow-label {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .guide-flow-steps {
+    flex-direction: column;
+  }
+  .guide-flow-step {
+    padding-right: 0;
+    padding-bottom: 18px;
+  }
+  .guide-flow-step:not(:last-child)::after {
+    content: "\2193";
+    right: 50%;
+    transform: translateX(50%);
+    top: auto;
+    bottom: 0;
+  }
+}
+
 /* Responsive table scroll */
 @media (max-width: 767px) {
   .guide-table-wrap {
