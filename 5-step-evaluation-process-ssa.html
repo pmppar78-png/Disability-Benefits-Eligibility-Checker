@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>5-Step Evaluation Process (SSA) | Disability Trust AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn how SSA decides disability claims using the formal 5-step sequential evaluation process, including SGA, severity, listings, RFC, past work, and other work analysis." />
+  <link rel="canonical" href="https://disabilitytrustai.netlify.app/5-step-evaluation-process-ssa.html" />
+  <meta property="og:title" content="5-Step Evaluation Process (SSA)" />
+  <meta property="og:description" content="A plain-language guide to the Social Security 5-step sequential evaluation: what SSA asks at each step, why claims are denied, and what evidence matters." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://disabilitytrustai.netlify.app/5-step-evaluation-process-ssa.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5-Step Evaluation Process (SSA)" />
+  <meta name="twitter:description" content="How Social Security evaluates disability claims at Steps 1 through 5, with practical examples, denial patterns, and a usable checklist." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page">
+  <header class="site-header">
+    <div class="header-content">
+      <div class="brand">
+        <div class="brand-logo">DT</div>
+        <div class="brand-text">
+          <div class="brand-title">Disability Trust AI</div>
+          <div class="brand-subtitle">Free screening &bull; Not the government &bull; No legal advice</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="how-disability-benefits-work.html" class="nav-link">Benefits Guide</a>
+        <a href="ssdi-complete-guide.html" class="nav-link">SSDI Guide</a>
+        <a href="ssi-complete-guide.html" class="nav-link">SSI Guide</a>
+        <a href="va-disability-benefits-guide.html" class="nav-link">VA Guide</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="chat.html" class="nav-link nav-link-primary">AI Helper</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="card-section guide-article">
+      <h1>5-Step Evaluation Process (SSA)</h1>
+      <p class="guide-updated">Last updated: April 18, 2026 | Decision-framework guide to the SSA sequential evaluation process | Written by Paul Paradis</p>
+
+      <div class="guide-callout guide-callout-blue">
+        <h2>Scope of This Page</h2>
+        <p>This page explains the formal five-step decision framework SSA uses to decide adult disability claims. It stays focused on how adjudicators move from one step to the next, what they are asking, and where files succeed or fail. It is not a filing tutorial, appeals playbook, or full SSDI/SSI program overview. For those topics, use the <a href="disability-application-process.html">application process guide</a>, <a href="how-to-apply-for-ssdi.html">how to apply for SSDI</a>, <a href="how-to-apply-for-ssi.html">how to apply for SSI</a>, and <a href="how-to-appeal-a-denial.html">appeal guide</a>.</p>
+      </div>
+
+      <nav class="toc" aria-label="Table of contents">
+        <h2 class="toc-heading">On This Page</h2>
+        <ol class="toc-list">
+          <li><a href="#what-process-is">What the 5-step evaluation process actually is</a></li>
+          <li><a href="#why-process-matters">Why this process matters</a></li>
+          <li><a href="#quick-visual-overview">Quick visual overview of all 5 steps</a></li>
+          <li><a href="#step-1-sga">Step 1 - Substantial Gainful Activity (SGA)</a></li>
+          <li><a href="#step-2-severe">Step 2 - Severe impairment</a></li>
+          <li><a href="#step-3-listings">Step 3 - Listings</a></li>
+          <li><a href="#step-4-prw">Step 4 - Past relevant work</a></li>
+          <li><a href="#step-5-other-work">Step 5 - Other work in the national economy</a></li>
+          <li><a href="#how-rfc-fits">How RFC fits into the 5-step process</a></li>
+          <li><a href="#age-education-skills">Where age, education, and transferable skills enter</a></li>
+          <li><a href="#evidence-by-step">How SSA uses medical and non-medical evidence at each step</a></li>
+          <li><a href="#misunderstandings">The most common misunderstandings at each step</a></li>
+          <li><a href="#where-claims-fail">Where claims usually fail</a></li>
+          <li><a href="#dds-consultants-vocational">What DDS, medical consultants, and vocational evidence actually do</a></li>
+          <li><a href="#focus-each-step">What a claimant should focus on at each step</a></li>
+          <li><a href="#real-world-examples">Real-world examples of how cases move through the 5 steps</a></li>
+          <li><a href="#denied-at-step">If you are denied at one of the 5 steps, what that usually means</a></li>
+          <li><a href="#practical-checklist">Practical checklist</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="what-process-is">1. What the 5-step evaluation process actually is</h2>
+      <p>The Social Security Administration does not decide disability by asking one broad question like, "Are you sick enough?" It uses a fixed sequence of legal checkpoints called the five-step sequential evaluation process. Decision-makers move through each step in order, and many cases end before all five are reached. That structure matters because a claim can be denied early for technical or vocational reasons even when the underlying medical condition is real.</p>
+      <p>At each step, SSA asks a narrower question than most claimants expect. Step 1 asks whether current work is over the substantial gainful activity threshold. Step 2 asks whether there is at least one medically determinable impairment that causes more than minimal work-related limitation. Step 3 asks whether the impairment meets or medically equals a Listing. If not, SSA determines Residual Functional Capacity and uses it at Steps 4 and 5 to assess work capacity. Step 4 asks if past relevant work can still be done. Step 5 asks whether other jobs exist in significant numbers in the national economy for a person with that RFC and vocational profile.</p>
+      <p>In plain terms, this is a decision tree, not a general sympathy review. The file must answer the exact question at the exact step where the case currently sits. Evidence that would be decisive at one step can be almost irrelevant at another.</p>
+
+      <h2 id="why-process-matters">2. Why this process matters</h2>
+      <p>Understanding the sequence changes how a claimant reads notices, prepares forms, and interprets denials. Without the five-step framework, denial language feels random and personal. With the framework, most denials become legible: the claim failed a defined checkpoint for a defined reason.</p>
+      <p>This helps in three practical ways. First, it keeps people from overfocusing on diagnosis labels when the decision turned on function or vocational factors. Second, it reduces wasted effort, such as sending extra records that do not address the step at issue. Third, it makes communication with providers and representatives more precise.</p>
+      <p>The sequence also explains why two people with similar diagnoses can receive different decisions. Their earnings, prior jobs, ages, education levels, treatment documentation, and functional findings may place them at different points in the framework. SSA does not run a single disease checklist; it applies a structured medical-vocational analysis.</p>
+
+      <h2 id="quick-visual-overview">3. Quick visual overview of all 5 steps</h2>
+      <div class="guide-flow" aria-label="SSA 5-step sequential evaluation flow">
+        <h3 class="guide-flow-title">SSA Sequential Evaluation Flow</h3>
+        <ol class="guide-flow-steps">
+          <li class="guide-flow-step">
+            <div class="guide-flow-node">Step 1: SGA</div>
+            <div class="guide-flow-label">Working over SGA level? If yes, usually not disabled.</div>
+          </li>
+          <li class="guide-flow-step">
+            <div class="guide-flow-node">Step 2: Severe MDI</div>
+            <div class="guide-flow-label">Medically determinable impairment causing more than minimal work limits?</div>
+          </li>
+          <li class="guide-flow-step">
+            <div class="guide-flow-node">Step 3: Listings</div>
+            <div class="guide-flow-label">Meets or medically equals listing criteria? If yes, usually allowed.</div>
+          </li>
+          <li class="guide-flow-step">
+            <div class="guide-flow-node">Step 4: Past Work</div>
+            <div class="guide-flow-label">With RFC, can past relevant work still be performed?</div>
+          </li>
+          <li class="guide-flow-step">
+            <div class="guide-flow-node">Step 5: Other Work</div>
+            <div class="guide-flow-label">With RFC plus age/education/skills, can other work be done?</div>
+          </li>
+        </ol>
+      </div>
+      <div class="guide-callout guide-callout-orange">
+        <h3>Decision-order warning</h3>
+        <p>Many claimants assume SSA starts with "how severe is the condition overall." It does not. SSA applies the sequence. A claim can end at Step 1, 2, 4, or 5 without ever reaching a broad medical narrative.</p>
+      </div>
+
+      <h2 id="step-1-sga">4. Step 1 - Substantial Gainful Activity (SGA)</h2>
+      <p>Step 1 is a threshold screen about current work and earnings, not a medical judgment. SSA asks whether the claimant is engaging in substantial gainful activity. If countable earnings are above the SGA level, the claim is usually denied at this step regardless of diagnosis, imaging, or specialist support. This is why Step 1 is often called a gatekeeper.</p>
+      <p>Claimants often misunderstand this point in two directions. Some believe any work automatically kills a claim. That is not always true; the issue is whether work rises to the SGA level and reflects sustained competitive capacity. Others assume severe symptoms override SGA earnings. They generally do not. A strong medical file cannot bypass an active Step 1 bar.</p>
+      <p>Evidence at this step is mostly non-medical: wage records, pay stubs, employer statements, self-employment details, start and stop dates, reduced-hours evidence, and documentation of unsuccessful work attempts. Medical evidence still matters for context, especially when work ended or was reduced because of worsening symptoms, but earnings facts usually control the Step 1 outcome.</p>
+      <p>When a denial is issued at Step 1, the underlying message is not "condition not credible." The message is "work activity is currently inconsistent with disability under SSA earnings rules." That distinction is critical for next decisions.</p>
+
+      <h2 id="step-2-severe">5. Step 2 - Severe impairment</h2>
+      <p>If the claim clears Step 1, SSA asks whether there is at least one severe medically determinable impairment. Two terms drive this step: medically determinable impairment and severe. A medically determinable impairment must be established by objective medical evidence from acceptable medical sources. Symptoms alone, no matter how intense, are not enough without clinical grounding.</p>
+      <p>"Severe" at Step 2 is also widely misunderstood. It does not mean catastrophic, bedbound, or terminal. It means the impairment causes more than minimal limitation in basic work activities. Step 2 is intended as a low hurdle, but claims are still denied here when records are sparse, when objective findings are missing, or when duration is not established.</p>
+      <p>Evidence that matters includes diagnoses supported by examinations and testing, repeated treatment notes, mental-status findings for psychiatric claims, and basic functional observations. Short one-visit documentation often fails here because it confirms a complaint without proving sustained impairment.</p>
+      <p>Step 2 denials commonly reflect record quality problems more than disease legitimacy problems. A real condition can still fail Step 2 if documentation does not establish medically determinable impairment plus minimal functional impact over expected duration.</p>
+
+      <h2 id="step-3-listings">6. Step 3 - Listings</h2>
+      <p>Step 3 asks whether the impairment meets or medically equals a Listing in SSA's Listing of Impairments. This is an automatic-allowance pathway only when criteria are satisfied exactly or matched through medical equivalence. Listing-level findings are technical and criteria-based, so close is not enough.</p>
+      <p>A common claimant assumption is that serious diagnosis plus obvious hardship should equal a listing approval. Listings are stricter than that. They require specific objective findings, signs, test results, and documented functional criteria where applicable. If one required element is missing, SSA moves on to RFC analysis rather than granting by Listing.</p>
+      <p>Step 3 evidence is heavily medical and technical: imaging severity, neurological deficits, cardiac testing, pulmonary measures, laboratory values, psychiatric functional ratings, and longitudinal specialist notes. Non-medical reports can provide context, but they rarely substitute for missing Listing criteria.</p>
+      <p>Not meeting a Listing does not end a viable claim. Most approvals do not come from Step 3. They come later when RFC shows the claimant cannot sustain past work or other work under vocational rules.</p>
+
+      <h2 id="step-4-prw">7. Step 4 - Past relevant work</h2>
+      <p>If Step 3 is not met or equaled, SSA determines RFC and then applies Step 4: can the claimant perform past relevant work as actually performed or as generally performed in the national economy. "Past relevant work" has a defined meaning. It usually refers to recent work performed at substantial gainful levels long enough to learn the job. It does not mean every job a person ever had.</p>
+      <p>Step 4 frequently turns on job-content detail rather than broad labels. A claimant may remember a job as "cashier," while vocational classification may treat that job differently depending on lifting, standing, pace, machine operation, and managerial duties. If job demands are understated, SSA can conclude past work remains possible.</p>
+      <p>Key evidence includes complete work history forms, job duty descriptions, productivity demands, physical requirements, cognitive complexity, supervisory expectations, and any accommodations that were needed. Medical evidence remains central because RFC is medical-vocational, but inaccurate work history often drives avoidable Step 4 denials.</p>
+      <p>A Step 4 denial usually means SSA found enough retained function to perform at least one qualifying past job. It does not necessarily mean SSA thinks there are many other jobs available; that is Step 5 territory.</p>
+
+      <h2 id="step-5-other-work">8. Step 5 - Other work in the national economy</h2>
+      <p>Step 5 is reached only if the claimant cannot do past relevant work. Here SSA asks whether other jobs exist in significant numbers in the national economy that can be performed with the assessed RFC and vocational profile. This is where age, education, exertional level, and transferable skills become especially important, and where the medical-vocational grid rules can direct outcomes in some profiles.</p>
+      <p>Claimants often read Step 5 as a local job-search test. It is not. SSA does not ask whether there is an opening down the street or whether the claimant would be hired in today's market. The question is whether jobs exist in significant numbers nationally for someone with the established limitations.</p>
+      <p>Evidence includes RFC-supported medical limits, vocational evidence about occupational demands, work history and skill transferability, and in hearing-level cases vocational expert testimony. Non-exertional limitations such as off-task time, absenteeism, social limits, pain-related pace loss, or inability to maintain persistence can be decisive because they shrink the job base.</p>
+      <p>Step 5 denials are common when the RFC is assessed too broadly, when mental limits are underdocumented, when side effects are mentioned but not clinically tracked, or when daily activity statements are interpreted as greater work capacity than intended.</p>
+
+      <h2 id="how-rfc-fits">9. How RFC fits into the 5-step process</h2>
+      <p>Residual Functional Capacity is not one of the five steps, but it is the bridge between the medical findings and the vocational conclusions at Steps 4 and 5. Once SSA decides the case does not end at Step 3, adjudicators build an RFC describing the most a claimant can still do despite medically determinable impairments.</p>
+      <p>RFC covers exertional limits such as lifting, carrying, standing, walking, and sitting. It also covers postural limits, manipulative limits, environmental limits, and mental limits involving attention, pace, adaptation, and social interaction. A claim with strong diagnosis evidence can still be denied if the RFC remains broad enough to support full-time work.</p>
+      <p>This is why diagnosis alone is never sufficient. The file must tie condition findings to sustained functional impact in work terms. Phrases like "severe pain" or "high anxiety" need practical translation: how long tasks can be sustained, how often breaks are needed, how frequently symptoms interrupt concentration, and whether symptoms cause predictable absences.</p>
+      <div class="guide-callout guide-callout-blue">
+        <h3>RFC reality check</h3>
+        <p>Most disputed cases are really RFC disputes. The same medical chart can produce different outcomes depending on whether functional limits are documented concretely enough to change the RFC.</p>
+      </div>
+
+      <h2 id="age-education-skills">10. Where age, education, and transferable skills enter</h2>
+      <p>Age, education, and skills do not control early medical steps. They matter most at Step 5, after SSA decides a claimant cannot do past relevant work. At that point SSA evaluates vocational adjustment: how realistically a person with the given RFC can transition to other jobs.</p>
+      <p>Age categories can materially affect outcomes, especially for older claimants limited to certain exertional levels. Education level and literacy factors matter because they influence training and adaptation assumptions. Transferable skills matter because they determine whether past work experience opens other occupations or leaves a narrow path.</p>
+      <p>The grid rules can direct favorable or unfavorable findings in some combinations of age, education, work background, and exertional RFC. But grids are not universal. Non-exertional limitations can reduce grid usefulness and require more individualized vocational analysis.</p>
+      <p>Practical takeaway: vocational factors are not "extras" and they are not unfair side notes. They are built into federal disability law and become central once the case reaches Step 5.</p>
+
+      <h2 id="evidence-by-step">11. How SSA uses medical and non-medical evidence at each step</h2>
+      <p>The table below summarizes the exact decision pressure at each step. This is the core comparison map claimants usually need when trying to understand why a case moved the way it did.</p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>What SSA is asking</th>
+              <th>What evidence matters</th>
+              <th>Common denial reason</th>
+              <th>What claimants miss</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Step 1 - SGA</td>
+              <td>Are you currently working above SGA level?</td>
+              <td>Earnings records, pay history, work dates, unsuccessful work attempt details</td>
+              <td>Earnings exceed threshold</td>
+              <td>Medical severity does not override active SGA</td>
+            </tr>
+            <tr>
+              <td>Step 2 - Severe MDI</td>
+              <td>Do you have a medically determinable impairment that is severe?</td>
+              <td>Objective findings, treating notes, diagnoses tied to function, duration evidence</td>
+              <td>Symptoms reported without objective establishment of impairment, or only minimal limits documented</td>
+              <td>"Severe" means more than minimal work limitation, not catastrophic illness</td>
+            </tr>
+            <tr>
+              <td>Step 3 - Listings</td>
+              <td>Do findings meet or medically equal listing criteria?</td>
+              <td>Specific listing criteria evidence, specialist records, tests, longitudinal findings</td>
+              <td>One or more listing elements not established</td>
+              <td>Close is not enough; listing pathways are technical and exact</td>
+            </tr>
+            <tr>
+              <td>Step 4 - Past Relevant Work</td>
+              <td>With your RFC, can you still perform past relevant work?</td>
+              <td>RFC findings, accurate job duty detail, exertional and mental demands of prior jobs</td>
+              <td>SSA finds at least one past job still performable</td>
+              <td>Past relevant work is recent substantial learnable work, not every job ever held</td>
+            </tr>
+            <tr>
+              <td>Step 5 - Other Work</td>
+              <td>Can you adjust to other work in significant national numbers?</td>
+              <td>RFC, age, education, transferable skills, vocational evidence, grid framework</td>
+              <td>SSA finds other jobs compatible with assessed limitations</td>
+              <td>Local hiring conditions are not the legal test</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Medical and non-medical evidence blend differently at each stage. Steps 2 and 3 are mostly medical with legal structure. Steps 4 and 5 are medical-vocational, so work history quality and functional precision become just as influential as diagnostic labels.</p>
+
+      <h2 id="misunderstandings">12. The most common misunderstandings at each step</h2>
+      <h3>Step 1 misunderstanding: "Any work means automatic denial"</h3>
+      <p>Some work can be below SGA or qualify as an unsuccessful work attempt. The real question is sustained countable work at SGA levels, not any activity at all.</p>
+
+      <h3>Step 2 misunderstanding: "Symptoms should be enough"</h3>
+      <p>SSA requires medically determinable impairment evidence. Symptoms matter, but they must be anchored in objective medical evidence and consistent clinical documentation.</p>
+
+      <h3>Step 2 misunderstanding: "Severe means extreme"</h3>
+      <p>Step 2 severity is a low legal bar. It means more than minimal interference with basic work activities. People can fail this step because records are thin, not because the condition is minor in real life.</p>
+
+      <h3>Step 3 misunderstanding: "A serious diagnosis should meet a listing"</h3>
+      <p>Listings are criteria-driven pathways. A diagnosis can be severe but still fail listing requirements if required findings are incomplete or inconsistent.</p>
+
+      <h3>Step 4 misunderstanding: "Past work means any job from my lifetime"</h3>
+      <p>Past relevant work has a specific legal meaning tied to recency, substantiality, and learnability. Old brief or low-level jobs often do not control Step 4.</p>
+
+      <h3>Step 5 misunderstanding: "If employers won’t hire me, SSA must approve"</h3>
+      <p>SSA evaluates theoretical capacity under legal standards, not current local labor-market hiring realities. That disconnect surprises many claimants.</p>
+
+      <h3>Cross-step misunderstanding: "Diagnosis alone wins cases"</h3>
+      <p>A condition can be real and well diagnosed yet still denied when the file does not document functional limits strongly enough. This is one of the most common patterns across all denial levels.</p>
+
+      <h3>Cross-step misunderstanding: "Daily activities never matter"</h3>
+      <p>Daily activities are not a direct measure of full-time work capacity, but contradictions between forms and records can damage credibility and RFC findings. Context and frequency details matter.</p>
+
+      <h2 id="where-claims-fail">13. Where claims usually fail</h2>
+      <p>Most adult claims do not fail at Listing analysis. They fail in the transition from medical narrative to functional and vocational proof. Three points account for many denials.</p>
+      <div class="guide-steps-visual">
+        <div class="guide-step">
+          <div class="guide-step-num">1</div>
+          <div class="guide-step-content">
+            <h4>Step 1 earnings issues</h4>
+            <p>Claimant remains above SGA during adjudication, or work activity is not explained clearly as reduced, subsidized, or unsuccessful.</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="guide-step-num">2</div>
+          <div class="guide-step-content">
+            <h4>Step 2 documentation gaps</h4>
+            <p>Symptoms are sincere but records do not establish medically determinable impairment plus more-than-minimal functional impact over required duration.</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="guide-step-num">3</div>
+          <div class="guide-step-content">
+            <h4>Step 4 and 5 RFC weakness</h4>
+            <p>Diagnosis is established, but function evidence is too vague, inconsistent, or unsupported to produce a restrictive RFC that rules out work.</p>
+          </div>
+        </div>
+      </div>
+      <div class="guide-callout guide-callout-orange">
+        <h3>Frequent hidden failure point</h3>
+        <p>Daily activity statements are often interpreted without context. Saying "can cook" or "can shop" without time limits, assistance details, and recovery effects can be misread as sustained workplace ability.</p>
+      </div>
+
+      <h2 id="dds-consultants-vocational">14. What DDS, medical consultants, and vocational evidence actually do</h2>
+      <p>DDS examiners develop the file, request records, evaluate evidence, and prepare initial and reconsideration determinations under SSA rules. They are not deciding based on one exam or one doctor note; they are building a legal record from mixed evidence sources.</p>
+      <p>DDS medical and psychological consultants review evidence and help translate clinical findings into functional terms. They do not replace treating providers, but their opinions can shape RFC when treating records are incomplete, inconsistent, or not function-specific.</p>
+      <p>Vocational evidence enters strongly at Steps 4 and 5. At DDS levels, vocational findings are often based on documented work history and occupational classification frameworks. At hearing level, vocational experts may testify about job demands, skill transferability, and numbers of jobs in the national economy under hypothetical RFC scenarios.</p>
+      <p>Understanding these roles helps avoid a common mistake: treating the case as if one sympathetic letter will settle everything. Disability decisions are built from cumulative consistency across medical findings, function detail, and vocational logic.</p>
+
+      <h2 id="focus-each-step">15. What a claimant should focus on at each step</h2>
+      <p>Claimants get better outcomes when they match effort to the active decision point instead of submitting broad generic updates.</p>
+      <div class="guide-steps-visual">
+        <div class="guide-step">
+          <div class="guide-step-num">1</div>
+          <div class="guide-step-content">
+            <h4>Focus at Step 1</h4>
+            <p>Get work and earnings facts clean. Track hours, pay, subsidies, accommodations, and any failed work attempts so work activity is interpreted accurately.</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="guide-step-num">2</div>
+          <div class="guide-step-content">
+            <h4>Focus at Step 2</h4>
+            <p>Establish medically determinable impairments with objective support and show more-than-minimal work limitations in routine clinical records.</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="guide-step-num">3</div>
+          <div class="guide-step-content">
+            <h4>Focus at Step 3</h4>
+            <p>Match evidence to specific listing criteria rather than relying on diagnosis labels or broad severity statements.</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="guide-step-num">4</div>
+          <div class="guide-step-content">
+            <h4>Focus at Step 4</h4>
+            <p>Make past job demands concrete and accurate. Document lifting, standing, pace, attention demands, and why prior tasks cannot be sustained.</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="guide-step-num">5</div>
+          <div class="guide-step-content">
+            <h4>Focus at Step 5</h4>
+            <p>Demonstrate the full functional impact of physical and mental limits, including persistence, pace, attendance, off-task behavior, and adaptation barriers.</p>
+          </div>
+        </div>
+      </div>
+      <p>Across all five steps, consistency is the multiplier. Treatment notes, forms, work history, and third-party statements should align on the same functional pattern.</p>
+
+      <h2 id="real-world-examples">16. Real-world examples of how cases move through the 5 steps</h2>
+      <p>The examples below are simplified composites to show how the framework works in practice.</p>
+
+      <h3>Example path A: Step 1 denial despite severe diagnosis</h3>
+      <p>A claimant with advanced spinal disease continues full-time work above SGA while filing, expecting imaging severity to drive approval. At Step 1, SSA denies because countable earnings remain above threshold. The denial does not dispute the diagnosis; it reflects a threshold earnings finding.</p>
+
+      <h3>Example path B: Step 2 denial due to documentation gap</h3>
+      <p>A claimant reports daily disabling fatigue and pain but has sporadic treatment, minimal objective findings, and no sustained specialist follow-up. SSA cannot establish a severe medically determinable impairment with enough duration and function detail, so the claim ends at Step 2.</p>
+
+      <h3>Example path C: Step 3 not met, then Step 5 allowance via RFC and vocational profile</h3>
+      <p>A claimant with cardiopulmonary and anxiety conditions does not meet listing criteria exactly. SSA proceeds to RFC, where records show limits to light exertion plus significant non-exertional restrictions and poor pace tolerance. Past relevant work is ruled out at Step 4. At Step 5, age and vocational profile combined with restricted RFC support a favorable decision.</p>
+
+      <h3>Example path D: Step 4 denial from incomplete job history detail</h3>
+      <p>A former warehouse supervisor lists prior work as mostly desk-based, but records later show frequent heavy lifting and prolonged standing. Because the initial work-history description was thin and inconsistent, SSA classifies past work at a level the assessed RFC can still perform and denies at Step 4.</p>
+
+      <h3>Example path E: Step 5 denial where medical condition is accepted</h3>
+      <p>SSA accepts multiple severe impairments and acknowledges ongoing treatment. However, RFC remains broad enough for simple routine sedentary work with limited social contact. Based on age, education, and non-transferable skills analysis, SSA finds other jobs in significant numbers and denies at Step 5.</p>
+
+      <h2 id="denied-at-step">17. If you are denied at one of the 5 steps, what that usually means</h2>
+      <p>The table below translates denial language into practical meaning.</p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <thead>
+            <tr>
+              <th>Denial point</th>
+              <th>What it usually means</th>
+              <th>Typical corrective direction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Denied at Step 1 (SGA)</td>
+              <td>SSA found current work activity above threshold levels.</td>
+              <td>Clarify work/earnings facts, failed work attempts, subsidy conditions, and timing.</td>
+            </tr>
+            <tr>
+              <td>Denied at Step 2 (severity/MDI)</td>
+              <td>Record did not establish severe medically determinable impairment under SSA standards.</td>
+              <td>Strengthen objective medical basis, duration evidence, and functional findings in treatment notes.</td>
+            </tr>
+            <tr>
+              <td>Denied at Step 3 (Listings not met/equaled)</td>
+              <td>Criteria for automatic listing allowance were not fully satisfied.</td>
+              <td>Shift focus to RFC-building evidence for Steps 4 and 5.</td>
+            </tr>
+            <tr>
+              <td>Denied at Step 4 (past relevant work)</td>
+              <td>SSA concluded RFC still permits at least one prior qualifying job.</td>
+              <td>Improve job-demand detail and functional evidence affecting specific prior task requirements.</td>
+            </tr>
+            <tr>
+              <td>Denied at Step 5 (other work)</td>
+              <td>SSA found other jobs exist in significant numbers for the assessed RFC and vocational profile.</td>
+              <td>Address RFC gaps, non-exertional limits, consistency issues, and vocational assumptions.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="guide-callout guide-callout-blue">
+        <h3>How to read denial language correctly</h3>
+        <p>A denial at one step is not a ruling on personal worth or treatment effort. It is a finding that a specific legal checkpoint was not satisfied with the evidence and vocational profile in the file at that time.</p>
+      </div>
+
+      <h2 id="practical-checklist">18. Practical checklist</h2>
+      <div class="guide-callout guide-callout-blue">
+        <h3>5-Step Process Checklist</h3>
+        <ul>
+          <li>Confirmed current work and earnings status before assuming medical issues will control</li>
+          <li>Documented at least one medically determinable impairment with objective support</li>
+          <li>Captured functional impact in work terms, not diagnosis labels alone</li>
+          <li>Checked whether any listing criteria are actually documented, not just suspected</li>
+          <li>Built accurate past relevant work descriptions with real duty demands</li>
+          <li>Tracked exertional and non-exertional limits that affect RFC at Steps 4 and 5</li>
+          <li>Included mental-function evidence where concentration, pace, adaptation, or social limits exist</li>
+          <li>Explained daily activities with context, frequency, and recovery effects</li>
+          <li>Aligned forms, records, and statements to avoid contradiction-based credibility problems</li>
+          <li>Reviewed denial language by step so next actions match the actual decision point</li>
+        </ul>
+      </div>
+
+      <h2 id="faq">19. FAQ</h2>
+      <details>
+        <summary>What is the SSA 5-step sequential evaluation process?</summary>
+        <p>It is SSA's formal decision framework that evaluates work activity, severity, listings, past relevant work, and ability to do other work in the national economy, in that order.</p>
+      </details>
+
+      <details>
+        <summary>Can SSA deny a claim even when the diagnosis is real?</summary>
+        <p>Yes. SSA can deny when functional limitations are not documented strongly enough under the step-by-step legal framework.</p>
+      </details>
+
+      <details>
+        <summary>Is RFC one of the five steps?</summary>
+        <p>No. RFC is assessed between Steps 3 and 4 and then used to decide Steps 4 and 5.</p>
+      </details>
+
+      <details>
+        <summary>Does severe at Step 2 mean catastrophic?</summary>
+        <p>No. At Step 2, severe means more than minimal limitation in basic work activities, not necessarily catastrophic illness.</p>
+      </details>
+
+      <details>
+        <summary>What does past relevant work mean in plain English?</summary>
+        <p>It means recent substantial work performed long enough to learn it. It does not include every job ever held.</p>
+      </details>
+
+      <details>
+        <summary>Where do age and education matter most?</summary>
+        <p>They matter primarily at Step 5 when SSA evaluates whether other work is possible under vocational rules and grid frameworks.</p>
+      </details>
+
+      <details>
+        <summary>Why do daily activities appear in denial reasoning?</summary>
+        <p>SSA compares activity statements with medical and function evidence. Unexplained contradictions can affect credibility and RFC findings.</p>
+      </details>
+
+      <details>
+        <summary>Do listings decide most approved claims?</summary>
+        <p>No. Many approvals occur at Steps 4 and 5 through RFC and vocational analysis rather than direct Listing findings.</p>
+      </details>
+
+      <div class="author-section">
+        <h3>About the Author</h3>
+        <p><strong>Written by Paul Paradis</strong></p>
+        <p>Paul researches Social Security disability adjudication patterns and translates medical-vocational standards into plain-language guidance for claimants and families.</p>
+        <p class="author-verification">Content is reviewed regularly for clarity and alignment with publicly available SSA policy and procedural materials.</p>
+      </div>
+
+      <p class="disclaimer"><strong>Educational disclaimer:</strong> This page is for informational purposes only and is not legal, medical, or financial advice. Disability Trust AI is not affiliated with or endorsed by the Social Security Administration or any government agency. Disability outcomes depend on individual evidence, vocational factors, and adjudicator findings. For advice on a specific case, consult a qualified attorney or accredited representative.</p>
+    </article>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year-footer"></span> Disability Trust AI. Educational use only. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      <p class="legal-small">Disability Trust AI is not the U.S. government, not the SSA, not the VA, and not a law firm. We do not file claims or provide legal representation. This site offers free educational screening tools only.</p>
+    </footer>
+  </main>
+
+  <script>
+    var y = document.getElementById('year-footer');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "5-Step Evaluation Process (SSA)",
+    "description": "A plain-language guide to how Social Security evaluates disability claims through the formal 5-step sequential evaluation framework.",
+    "datePublished": "2026-04-18",
+    "dateModified": "2026-04-18",
+    "author": {
+      "@type": "Person",
+      "name": "Paul Paradis",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Disability Trust AI",
+        "url": "https://disabilitytrustai.netlify.app"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Disability Trust AI",
+      "url": "https://disabilitytrustai.netlify.app"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://disabilitytrustai.netlify.app/5-step-evaluation-process-ssa.html"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the SSA 5-step sequential evaluation process?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It is SSA's formal decision framework that evaluates work activity, severity, listings, past relevant work, and ability to do other work in the national economy, in that order."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can SSA deny a claim even when the diagnosis is real?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. SSA can deny when functional limitations are not documented strongly enough under the step-by-step legal framework."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is RFC one of the five steps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. RFC is assessed between Steps 3 and 4 and then used to decide Steps 4 and 5."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does severe at Step 2 mean catastrophic?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. At Step 2, severe means more than minimal limitation in basic work activities, not necessarily catastrophic illness."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does past relevant work mean in plain English?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It means recent substantial work performed long enough to learn it. It does not include every job ever held."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where do age and education matter most?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "They matter primarily at Step 5 when SSA evaluates whether other work is possible under vocational rules and grid frameworks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do daily activities appear in denial reasoning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SSA compares activity statements with medical and function evidence. Unexplained contradictions can affect credibility and RFC findings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do listings decide most approved claims?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Many approvals occur at Steps 4 and 5 through RFC and vocational analysis rather than direct Listing findings."
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
