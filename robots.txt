@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://disabilitytrustai.netlify.app/sitemap.xml
+Sitemap: https://disabilitytrustai.com/sitemap.xml
