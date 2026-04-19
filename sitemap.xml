@@ -25,6 +25,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://disabilitytrustai.netlify.app/about-the-author.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://disabilitytrustai.netlify.app/contact.html</loc>
     <lastmod>2026-04-09</lastmod>
     <changefreq>monthly</changefreq>
