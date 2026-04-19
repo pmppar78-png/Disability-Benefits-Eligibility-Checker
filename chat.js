@@ -2,29 +2,43 @@ const apiEndpoint = "/.netlify/functions/ai-chat";
 
 const messages = [];
 
-function appendMessage(role, content) {
-  const log = document.getElementById("chat-log");
-  if (!log) return;
+function createBubble(role) {
   const wrapper = document.createElement("div");
   wrapper.className = `chat-message ${role}`;
   const bubble = document.createElement("div");
   bubble.className = "chat-bubble";
-  // Use innerHTML for assistant (to render affiliate links), textContent for user (security)
-  if (role === "assistant") {
-    bubble.innerHTML = content;
-  } else {
-    bubble.textContent = content;
-  }
   wrapper.appendChild(bubble);
+  return { wrapper, bubble };
+}
+
+function appendMessage(role, content) {
+  const log = document.getElementById("chat-log");
+  if (!log) return null;
+  const { wrapper, bubble } = createBubble(role);
+  bubble.textContent = content;
   log.appendChild(wrapper);
   log.scrollTop = log.scrollHeight;
+  return bubble;
+}
+
+function appendThinking() {
+  const log = document.getElementById("chat-log");
+  if (!log) return null;
+  const { wrapper, bubble } = createBubble("assistant");
+  const dots = document.createElement("span");
+  dots.className = "dots";
+  dots.textContent = "Thinking…";
+  bubble.appendChild(dots);
+  log.appendChild(wrapper);
+  log.scrollTop = log.scrollHeight;
+  return bubble;
 }
 
 async function sendMessage(text) {
   appendMessage("user", text);
   messages.push({ role: "user", content: text });
 
-  appendMessage("assistant", "<span class='dots'>Thinking…</span>");
+  const thinkingBubble = appendThinking();
 
   try {
     const res = await fetch(apiEndpoint, {
@@ -34,25 +48,21 @@ async function sendMessage(text) {
     });
 
     const data = await res.json();
-    const log = document.getElementById("chat-log");
-    if (!log) return;
+    const reply = (data && data.reply && typeof data.reply.content === "string")
+      ? data.reply.content
+      : "Sorry — I couldn't generate a reply.";
 
-    // replace last assistant "Thinking…" bubble
-    const bubbles = log.querySelectorAll(".chat-message.assistant .chat-bubble");
-    const last = bubbles[bubbles.length - 1];
-    if (last) last.innerHTML = data.reply?.content || "Sorry — I couldn't generate a reply.";
-    messages.push({ role: "assistant", content: data.reply?.content || "" });
+    if (thinkingBubble) thinkingBubble.textContent = reply;
+    messages.push({ role: "assistant", content: reply });
   } catch (err) {
-    const log = document.getElementById("chat-log");
-    const bubbles = log?.querySelectorAll(".chat-message.assistant .chat-bubble");
-    const last = bubbles && bubbles[bubbles.length - 1];
-    if (last) last.textContent = "There was a problem reaching the AI helper. Please try again.";
+    if (thinkingBubble) {
+      thinkingBubble.textContent = "There was a problem reaching the AI helper. Please try again.";
+    }
     console.error(err);
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Set footer year
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
