@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact Us - Disability Trust AI</title>
+  <title>Contact - Disability Trust AI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Contact Disability Trust AI with questions, feedback, or partnership inquiries about our free disability benefits educational tools." />
+  <meta name="description" content="Business, advertising, and partnership contact for Disability Trust AI. This site does not provide individual claim assistance or case support." />
   <link rel="canonical" href="https://disabilitytrustai.netlify.app/contact.html" />
-  <meta property="og:title" content="Contact Us - Disability Trust AI" />
-  <meta property="og:description" content="Contact Disability Trust AI with questions, feedback, or partnership inquiries." />
+  <meta property="og:title" content="Contact - Disability Trust AI" />
+  <meta property="og:description" content="Business, advertising, and partnership contact for Disability Trust AI." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://disabilitytrustai.netlify.app/contact.html" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Contact Us - Disability Trust AI" />
-  <meta name="twitter:description" content="Contact Disability Trust AI with questions, feedback, or partnership inquiries." />
+  <meta name="twitter:title" content="Contact - Disability Trust AI" />
+  <meta name="twitter:description" content="Business, advertising, and partnership contact for Disability Trust AI." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="page">
@@ -40,64 +40,26 @@
 
   <main>
     <section class="card-section">
-      <h1>Contact Us</h1>
+      <h1>Contact</h1>
+
       <p>
-        Have a question about how our educational tools work, want to report an issue, or interested in
-        partnering with us? We would like to hear from you. Fill out the form below and we will get back
-        to you as soon as possible.
+        Contact: <a href="mailto:advertise@disabilitytrustai.com"><strong>advertise@disabilitytrustai.com</strong></a>
+      </p>
+
+      <p>
+        This email is the right address for business, advertising, and partnership inquiries,
+        including media requests, sponsorship discussions, and collaboration proposals.
       </p>
 
       <p class="disclaimer">
-        <strong>Important:</strong> We cannot provide legal, medical, or financial advice, and we cannot
-        help with individual disability claims or applications. For help with your specific case, please
-        contact the <a href="https://www.ssa.gov/benefits/disability/" rel="noopener" target="_blank">Social Security Administration</a>,
+        <strong>Please note:</strong> Disability Trust AI does not provide individual claim
+        assistance or case support. We cannot review personal situations, answer
+        case-specific questions, or provide legal, medical, or financial advice. For help
+        with a specific disability claim, please contact the
+        <a href="https://www.ssa.gov/benefits/disability/" rel="noopener" target="_blank">Social Security Administration</a>,
         the <a href="https://www.va.gov/disability/" rel="noopener" target="_blank">Department of Veterans Affairs</a>,
         or a licensed disability attorney.
       </p>
-
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="wizard" id="contact-form">
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden>
-          <label>Don't fill this out: <input name="bot-field" /></label>
-        </p>
-
-        <div class="field">
-          <label for="contact-name">Your name</label>
-          <select id="contact-name-type" style="display:none"></select>
-          <input type="text" id="contact-name" name="name" required placeholder="First name or initials"
-            style="padding:10px 12px;border-radius:14px;border:1px solid rgba(55,65,81,0.8);background:rgba(15,23,42,0.9);color:var(--text);font-size:14px;width:100%;max-width:100%;" />
-        </div>
-
-        <div class="field">
-          <label for="contact-email">Email address</label>
-          <input type="email" id="contact-email" name="email" required placeholder="you@example.com"
-            style="padding:10px 12px;border-radius:14px;border:1px solid rgba(55,65,81,0.8);background:rgba(15,23,42,0.9);color:var(--text);font-size:14px;width:100%;max-width:100%;" />
-        </div>
-
-        <div class="field">
-          <label for="contact-subject">Subject</label>
-          <select id="contact-subject" name="subject" required>
-            <option value="">Select a topic...</option>
-            <option value="general">General question about the site</option>
-            <option value="feedback">Feedback or suggestion</option>
-            <option value="bug">Report a problem or bug</option>
-            <option value="partnership">Partnership or advertising inquiry</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="contact-message">Message</label>
-          <textarea id="contact-message" name="message" required rows="5" placeholder="How can we help?"
-            style="padding:10px 12px;border-radius:14px;border:1px solid rgba(55,65,81,0.8);background:rgba(15,23,42,0.9);color:var(--text);font-size:14px;width:100%;max-width:100%;font-family:inherit;resize:vertical;"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-full">Send message</button>
-      </form>
-
-      <div id="contact-success" class="result-card" hidden>
-        <p><strong>Thank you!</strong> Your message has been sent. We will review it and get back to you as soon as we can.</p>
-      </div>
     </section>
 
     <footer class="site-footer">
@@ -106,26 +68,10 @@
         This site does not provide legal, financial, or medical advice and is not a substitute for
         consulting with a licensed professional or government agency.
       </p>
+      <p class="legal-small">Contact: <a href="mailto:advertise@disabilitytrustai.com">advertise@disabilitytrustai.com</a> &mdash; for business, advertising, or partnership inquiries only. This site does not provide individual claim assistance or case support.</p>
     </footer>
   </main>
 
   <script src="app.js"></script>
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      var form = e.target;
-      var data = new FormData(form);
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString()
-      }).then(function() {
-        form.hidden = true;
-        document.getElementById('contact-success').hidden = false;
-      }).catch(function() {
-        alert('There was an error sending your message. Please try again.');
-      });
-      e.preventDefault();
-    });
-  </script>
 </body>
 </html>
