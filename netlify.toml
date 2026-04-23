@@ -1,3 +1,10 @@
 [build]
   publish = "."
   functions = "netlify/functions"
+
+# Disable pretty URL post-processing so canonical `.html` URLs
+# serve 200 directly instead of 301-redirecting to the extensionless form.
+# This is the root fix for the Search Console "Page with redirect" +
+# "Alternate page with proper canonical tag" errors.
+[build.processing.html]
+  pretty_urls = false

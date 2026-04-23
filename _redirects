@@ -1,1 +1,79 @@
-/ai-chat /.netlify/functions/ai-chat 200
+# AI chat function endpoint
+/ai-chat                                      /.netlify/functions/ai-chat  200
+
+# Collapse root duplicates to the single canonical root URL
+/index.html                                   /                             301!
+/index                                        /                             301!
+/home                                         /                             301!
+
+# Force canonical `.html` form for every indexable page.
+# Each rule is a single-hop 301 — no chains.
+# Both extensionless and trailing-slash variants redirect directly to the .html target.
+/5-step-evaluation-process-ssa                /5-step-evaluation-process-ssa.html                 301!
+/5-step-evaluation-process-ssa/               /5-step-evaluation-process-ssa.html                 301!
+/about                                        /about.html                                         301!
+/about/                                       /about.html                                         301!
+/about-the-author                             /about-the-author.html                              301!
+/about-the-author/                            /about-the-author.html                              301!
+/autoimmune-conditions-disability             /autoimmune-conditions-disability.html              301!
+/autoimmune-conditions-disability/            /autoimmune-conditions-disability.html              301!
+/back-spine-conditions-disability             /back-spine-conditions-disability.html              301!
+/back-spine-conditions-disability/            /back-spine-conditions-disability.html              301!
+/cancer-disability-benefits                   /cancer-disability-benefits.html                    301!
+/cancer-disability-benefits/                  /cancer-disability-benefits.html                    301!
+/chat                                         /chat.html                                          301!
+/chat/                                        /chat.html                                          301!
+/chronic-pain-disability                      /chronic-pain-disability.html                       301!
+/chronic-pain-disability/                     /chronic-pain-disability.html                       301!
+/contact                                      /contact.html                                       301!
+/contact/                                     /contact.html                                       301!
+/disability-application-process               /disability-application-process.html                301!
+/disability-application-process/              /disability-application-process.html                301!
+/disability-benefits-faq                      /disability-benefits-faq.html                       301!
+/disability-benefits-faq/                     /disability-benefits-faq.html                       301!
+/documents-checklist-what-to-prepare          /documents-checklist-what-to-prepare.html           301!
+/documents-checklist-what-to-prepare/         /documents-checklist-what-to-prepare.html           301!
+/free-resources-government-links              /free-resources-government-links.html               301!
+/free-resources-government-links/             /free-resources-government-links.html               301!
+/glossary-of-disability-terms                 /glossary-of-disability-terms.html                  301!
+/glossary-of-disability-terms/                /glossary-of-disability-terms.html                  301!
+/heart-conditions-disability                  /heart-conditions-disability.html                   301!
+/heart-conditions-disability/                 /heart-conditions-disability.html                   301!
+/how-disability-benefits-work                 /how-disability-benefits-work.html                  301!
+/how-disability-benefits-work/                /how-disability-benefits-work.html                  301!
+/how-long-disability-takes                    /how-long-disability-takes.html                     301!
+/how-long-disability-takes/                   /how-long-disability-takes.html                     301!
+/how-to-appeal-a-denial                       /how-to-appeal-a-denial.html                        301!
+/how-to-appeal-a-denial/                      /how-to-appeal-a-denial.html                        301!
+/how-to-apply-for-ssdi                        /how-to-apply-for-ssdi.html                         301!
+/how-to-apply-for-ssdi/                       /how-to-apply-for-ssdi.html                         301!
+/how-to-apply-for-ssi                         /how-to-apply-for-ssi.html                          301!
+/how-to-apply-for-ssi/                        /how-to-apply-for-ssi.html                          301!
+/mental-health-and-disability                 /mental-health-and-disability.html                  301!
+/mental-health-and-disability/                /mental-health-and-disability.html                  301!
+/neurological-conditions-disability           /neurological-conditions-disability.html            301!
+/neurological-conditions-disability/          /neurological-conditions-disability.html            301!
+/privacy                                      /privacy.html                                       301!
+/privacy/                                     /privacy.html                                       301!
+/ssdi-complete-guide                          /ssdi-complete-guide.html                           301!
+/ssdi-complete-guide/                         /ssdi-complete-guide.html                           301!
+/ssdi-vs-ssi-comparison                       /ssdi-vs-ssi-comparison.html                        301!
+/ssdi-vs-ssi-comparison/                      /ssdi-vs-ssi-comparison.html                        301!
+/ssi-complete-guide                           /ssi-complete-guide.html                            301!
+/ssi-complete-guide/                          /ssi-complete-guide.html                            301!
+/state-disability-programs                    /state-disability-programs.html                     301!
+/state-disability-programs/                   /state-disability-programs.html                     301!
+/terms                                        /terms.html                                         301!
+/terms/                                       /terms.html                                         301!
+/top-qualifying-conditions-overview           /top-qualifying-conditions-overview.html            301!
+/top-qualifying-conditions-overview/          /top-qualifying-conditions-overview.html            301!
+/va-disability-benefits-guide                 /va-disability-benefits-guide.html                  301!
+/va-disability-benefits-guide/                /va-disability-benefits-guide.html                  301!
+/vision-hearing-loss-disability               /vision-hearing-loss-disability.html                301!
+/vision-hearing-loss-disability/              /vision-hearing-loss-disability.html                301!
+/what-medical-evidence-you-need               /what-medical-evidence-you-need.html                301!
+/what-medical-evidence-you-need/              /what-medical-evidence-you-need.html                301!
+/when-to-hire-disability-attorney             /when-to-hire-disability-attorney.html              301!
+/when-to-hire-disability-attorney/            /when-to-hire-disability-attorney.html              301!
+/working-while-on-disability-sga-rules        /working-while-on-disability-sga-rules.html         301!
+/working-while-on-disability-sga-rules/       /working-while-on-disability-sga-rules.html         301!
