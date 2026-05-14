@@ -1,21 +1,2 @@
 # AI chat function endpoint
-/ai-chat                                      /.netlify/functions/ai-chat  200
-
-# ---------------------------------------------------------------------------
-# Single canonical host: https://disabilitytrustai.com
-# Force every other host/protocol/index.html variant to a single 301 hop.
-# ---------------------------------------------------------------------------
-
-# http (apex) -> https (apex)
-http://disabilitytrustai.com/*                https://disabilitytrustai.com/:splat   301!
-
-# https www -> https apex
-https://www.disabilitytrustai.com/*           https://disabilitytrustai.com/:splat   301!
-
-# http www -> https apex
-http://www.disabilitytrustai.com/*            https://disabilitytrustai.com/:splat   301!
-
-# Collapse index.html (and other root duplicates) to "/"
-/index.html                                   /                                       301!
-/index                                        /                                       301!
-/home                                         /                                       301!
+/ai-chat    /.netlify/functions/ai-chat    200

@@ -2,8 +2,60 @@
   publish = "."
   functions = "netlify/functions"
 
-# Enforce a single canonical URL form: extensionless, https, apex domain.
-# pretty_urls = true makes Netlify 301 any `.html` request to its
-# extensionless equivalent and serve the extensionless URL with a 200.
 [build.processing.html]
   pretty_urls = true
+
+# ---------------------------------------------------------------------------
+# Redirects – single canonical host: https://disabilitytrustai.com
+# HTTP → HTTPS is enforced automatically by Netlify infrastructure.
+# These rules handle www → apex and duplicate-path cleanup.
+# ---------------------------------------------------------------------------
+
+# www → apex  (covers the post-HTTPS-enforcement hop)
+[[redirects]]
+  from = "https://www.disabilitytrustai.com/*"
+  to = "https://disabilitytrustai.com/:splat"
+  status = 301
+  force = true
+
+# Root duplicates → /
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+  force = true
+
+# ---------------------------------------------------------------------------
+# Headers – explicit indexability signals, security, and caching
+# ---------------------------------------------------------------------------
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "index, follow"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
