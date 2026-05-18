@@ -37,6 +37,13 @@
   status = 301
   force = true
 
+# .html → clean URL (eliminates duplicate URLs that confuse search engines)
+[[redirects]]
+  from = "/*.html"
+  to = "/:splat"
+  status = 301
+  force = true
+
 # ---------------------------------------------------------------------------
 # Headers – explicit indexability signals, security, and caching
 # ---------------------------------------------------------------------------
