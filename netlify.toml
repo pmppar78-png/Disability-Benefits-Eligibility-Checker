@@ -3,15 +3,30 @@
   functions = "netlify/functions"
 
 [build.processing.html]
-  pretty_urls = true
+  pretty_urls = false
 
 # ---------------------------------------------------------------------------
 # Redirects – single canonical host: https://disabilitytrustai.com
 # HTTP → HTTPS is enforced automatically by Netlify infrastructure.
-# These rules handle www → apex and duplicate-path cleanup.
+# These rules handle www → apex, .html cleanup, and duplicate-path cleanup.
+# Order: most-specific first, generic catch-alls last.
 # ---------------------------------------------------------------------------
 
-# www → apex  (covers the post-HTTPS-enforcement hop)
+# www + index.html → apex root (single hop)
+[[redirects]]
+  from = "https://www.disabilitytrustai.com/index.html"
+  to = "https://disabilitytrustai.com/"
+  status = 301
+  force = true
+
+# www + .html → apex clean URL (single hop, eliminates chain)
+[[redirects]]
+  from = "https://www.disabilitytrustai.com/*.html"
+  to = "https://disabilitytrustai.com/:splat"
+  status = 301
+  force = true
+
+# www → apex (generic catch-all)
 [[redirects]]
   from = "https://www.disabilitytrustai.com/*"
   to = "https://disabilitytrustai.com/:splat"
@@ -37,7 +52,7 @@
   status = 301
   force = true
 
-# .html → clean URL (eliminates duplicate URLs that confuse search engines)
+# .html → clean URL
 [[redirects]]
   from = "/*.html"
   to = "/:splat"
