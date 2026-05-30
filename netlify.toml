@@ -7,39 +7,23 @@
 
 # ---------------------------------------------------------------------------
 # Redirects – single canonical host: https://disabilitytrustai.com
+#
+# Principle: ONLY host/scheme canonicalization redirects. Every real content
+# URL (clean URL and its .html source) returns 200 and is de-duplicated by a
+# self-referencing <link rel="canonical">. This guarantees Google is never
+# asked to index a redirecting content URL — eliminating "Page with redirect".
+#
 # HTTP → HTTPS is enforced automatically by Netlify infrastructure.
-# These rules handle www → apex, .html cleanup, and duplicate-path cleanup.
-# Order: most-specific first, generic catch-alls last.
 # ---------------------------------------------------------------------------
 
-# www + index.html → apex root (single hop)
-[[redirects]]
-  from = "https://www.disabilitytrustai.com/index.html"
-  to = "https://disabilitytrustai.com/"
-  status = 301
-  force = true
-
-# www + .html → apex clean URL (single hop, eliminates chain)
-[[redirects]]
-  from = "https://www.disabilitytrustai.com/*.html"
-  to = "https://disabilitytrustai.com/:splat"
-  status = 301
-  force = true
-
-# www → apex (generic catch-all)
+# www → apex (single canonical host, single hop)
 [[redirects]]
   from = "https://www.disabilitytrustai.com/*"
   to = "https://disabilitytrustai.com/:splat"
   status = 301
   force = true
 
-# Root duplicates → /
-[[redirects]]
-  from = "/index.html"
-  to = "/"
-  status = 301
-  force = true
-
+# Homepage path aliases (no such files exist; convenience only, not indexed)
 [[redirects]]
   from = "/index"
   to = "/"
@@ -49,13 +33,6 @@
 [[redirects]]
   from = "/home"
   to = "/"
-  status = 301
-  force = true
-
-# .html → clean URL
-[[redirects]]
-  from = "/*.html"
-  to = "/:splat"
   status = 301
   force = true
 
